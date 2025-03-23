@@ -1,4 +1,4 @@
-package DataStructures.LinkedList;
+
 
 
 public class LinkedList {
@@ -37,9 +37,33 @@ public class LinkedList {
 
     public void PrintList() {
         Node temp = head;
+        System.out.println("List Starting:");
         while(temp!=null){
            System.out.println(temp.value);
            temp = temp.next;
         }
+        System.out.println("List Ended");
+    }
+
+    public void append(int value){
+        Node newNode = new Node(value);
+        if(length==0){
+           head = newNode;
+           tail = newNode;
+        }else{
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
+    public static void main(String[] args) {
+        LinkedList myLinkedList = new LinkedList(4);
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+
+        myLinkedList.PrintList();
+        myLinkedList.append(5);
+        myLinkedList.PrintList();
     }
 }
