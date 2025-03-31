@@ -97,6 +97,18 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public Node get(int index){
+        if(index < 0 || index >= length){
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+            
+        }
+        return temp;
+    }
     public static void main(String[] args) {
         LinkedList myLinkedList = new LinkedList(4);
         myLinkedList.getHead();
@@ -104,8 +116,13 @@ public class LinkedList {
         myLinkedList.getLength();
 
         myLinkedList.append(5);
+        myLinkedList.append(8);
+        myLinkedList.prepend(3);
+        myLinkedList.prepend(11);
 
-        System.out.println(myLinkedList.removeLast().value);
+        //System.out.println(myLinkedList.removeLast().value);
+
+        System.out.println(myLinkedList.get(1) + "\n");
 
 
 
