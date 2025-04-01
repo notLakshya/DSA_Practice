@@ -1,6 +1,8 @@
 
 
 
+
+
 public class LinkedList {
     private class Node {
      int value;
@@ -99,9 +101,7 @@ public class LinkedList {
     }
 
     public Node get(int index){
-        if(index < 0 || index >= length){
-            return null;
-        }
+        if(index < 0 || index >= length) return null;
         Node temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
@@ -109,6 +109,49 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public Boolean set(int index, int value){
+        Node temp = get(index);
+        if(temp!=null){
+            temp.value = value;
+            return true;
+        }
+    return false;
+    }
+
+    public Boolean insert(int index, int value){
+
+        if(index == 0){
+            prepend(value);
+            return true;
+        }
+        if(index == length){
+            append(value);
+            return true;
+        }
+            Node temp = get(index-1);
+            Node newNode = new Node(value);
+            newNode.next = temp.next;
+            temp.next = newNode;
+            length++;
+            return true;
+        
+    }
+
+    public Node remove(int index){
+        if(index < 0 || index >= length) return null;
+        if(index == 0) return  removeFirst();
+        if(index == length) return removeLast();
+
+        Node prev = get(index-1);
+        Node temp = prev.next;
+        prev.next = temp.next;
+        temp.next = null;
+        length--;
+
+        return temp;
+    }
+    
     public static void main(String[] args) {
         LinkedList myLinkedList = new LinkedList(4);
         myLinkedList.getHead();
@@ -123,6 +166,10 @@ public class LinkedList {
         //System.out.println(myLinkedList.removeLast().value);
 
         System.out.println(myLinkedList.get(1) + "\n");
+
+        System.out.println(myLinkedList.set(1, 4) + "\n");
+
+        myLinkedList.remove(2);
 
 
 
