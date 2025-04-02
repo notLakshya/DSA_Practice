@@ -151,6 +151,23 @@ public class LinkedList {
 
         return temp;
     }
+
+    public void reverse(){
+     Node temp = head;
+     head = tail;
+     tail = temp;
+     Node after = temp.next;
+     Node before = null;
+
+     for(int i = 0; i<length; i++){
+        after = temp.next;
+        temp.next = before;
+        before = temp;
+        temp = after;
+
+     }
+
+    }
     
     public static void main(String[] args) {
         LinkedList myLinkedList = new LinkedList(4);
@@ -169,7 +186,10 @@ public class LinkedList {
 
         System.out.println(myLinkedList.set(1, 4) + "\n");
 
-        myLinkedList.remove(2);
+        //myLinkedList.remove(2);
+        myLinkedList.PrintList();
+
+        myLinkedList.reverse();
 
 
 
