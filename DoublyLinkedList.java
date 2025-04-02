@@ -144,6 +144,19 @@ public class DoublyLinkedList {
             return true;
     }   
 
+    public Node remove(int index){
+        if(index < 0 || index >= length) return null;
+        if(index == 0) return  removeFirst();
+        if(index == length) return removeLast();
+        Node temp = get(index);
+        temp.next.prev = temp.prev;
+        temp.prev.next = temp.next;
+        temp.prev = null;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList myLinkedList = new DoublyLinkedList(4);
         myLinkedList.getHead();
@@ -166,6 +179,8 @@ public class DoublyLinkedList {
         System.out.println(myLinkedList.get(4));
 
         myLinkedList.insert(2, 11);
+
+        myLinkedList.remove(3);
         myLinkedList.printList();
 
 
