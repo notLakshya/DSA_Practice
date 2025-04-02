@@ -147,6 +147,11 @@ public class LinkedList {
         Node temp = prev.next;
         prev.next = temp.next;
         temp.next = null;
+
+        //Alternate to improve space complexity
+        // Node prev = get(index-1);
+        // prev.next = prev.next.next;
+        // prev.next.next = null;
         length--;
 
         return temp;
