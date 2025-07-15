@@ -9,6 +9,7 @@ public class DoublyLinkedList {
            this.value = value;
         }
        }
+       
        private Node head;
        private Node tail;
        int length;
