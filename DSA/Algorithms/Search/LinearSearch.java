@@ -1,4 +1,7 @@
 package DSA.Algorithms.Search;
+
+import java.util.Scanner;
+
 public class LinearSearch {
 
     public static int linearSearch(int[] arr, int target) {
@@ -14,8 +17,17 @@ public class LinearSearch {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 8, 10};
-        int target = 6;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        System.out.println("Enter the target value to search for:");
+        int target = scanner.nextInt();
+        scanner.close();
         int result = linearSearch(arr, target);
         if (result != -1) {
             System.out.println("Target found at index: " + result);
