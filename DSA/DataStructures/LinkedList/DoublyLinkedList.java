@@ -1,3 +1,4 @@
+package DSA.DataStructures.LinkedList;
 public class DoublyLinkedList {
 
     private class Node {
@@ -9,6 +10,7 @@ public class DoublyLinkedList {
            this.value = value;
         }
        }
+       
        private Node head;
        private Node tail;
        int length;

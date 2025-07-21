@@ -1,7 +1,4 @@
-
-
-
-
+package DSA.DataStructures.LinkedList;
 
 public class LinkedList {
     private class Node {
@@ -22,12 +19,12 @@ public class LinkedList {
         tail = newNode;
         length = 1;
     }
-    public Node getHead(){
+     Node getHead(){
         System.out.println("Head: " + head.value);
         return head;
     }
 
-    public Node getTail(){
+     Node getTail(){
         System.out.println("Tail: " + tail.value);
         return tail;
     }
@@ -70,7 +67,7 @@ public class LinkedList {
         }
         length++;
     }
-    public Node removeLast(){
+     Node removeLast(){
         if(length == 0) return null;
         Node temp = head;
         Node pre = head;
@@ -88,7 +85,7 @@ public class LinkedList {
         return temp;
         
     }
-    public Node removeFirst(){
+     Node removeFirst(){
         if(length == 0) return null;
         Node temp = head;
         head = head.next;
@@ -100,7 +97,7 @@ public class LinkedList {
         return temp;
     }
 
-    public Node get(int index){
+     Node get(int index){
         if(index < 0 || index >= length) return null;
         Node temp = head;
         for (int i = 0; i < index; i++) {
@@ -138,7 +135,7 @@ public class LinkedList {
         
     }
 
-    public Node remove(int index){
+     Node remove(int index){
         if(index < 0 || index >= length) return null;
         if(index == 0) return  removeFirst();
         if(index == length) return removeLast();
