@@ -27,7 +27,6 @@ public class OrderAgnosticBS {
             if (arr[mid] == target) {
                 return mid; // Target found
             }
-
             if (isAscending) {
                 if (arr[mid] < target) {
                     left = mid + 1; // Search in the right half
