@@ -13,9 +13,11 @@ public class CyclicSort {
         int i = 0;
         while (i < arr.length) {
             int correctIndex = arr[i] - 1; // Calculate the correct index for the current element
-            if (arr[i] != arr[correctIndex]) {
+            if(arr[i] != arr[correctIndex]) {
                 // Swap arr[i] and arr[correctIndex]
-                 
+                 int temp = arr[i];
+                arr[i] = arr[correctIndex];
+                arr[correctIndex] = temp;
             } else {
                 i++; // Move to the next element if the current element is in the correct position
             }
