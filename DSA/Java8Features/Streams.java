@@ -29,5 +29,11 @@ public class Streams {
 
         int[] mergedArr = Arrays.stream(new int[][]{arr1, arr2}).flatMapToInt(Arrays::stream).distinct().sorted().toArray();
         System.out.println(Arrays.toString(mergedArr));
+
+        // Grouping words by their starting letter using streams
+        List<String> words = Arrays.asList("apple", "banana", "cherry", "date", "fig", "grape");
+        Map<Character, List<String>> mapWords = words.stream()
+                .collect(Collectors.groupingBy(x -> x.charAt(0), Collectors.toList()));
+        System.out.println(mapWords);
     }
 }
