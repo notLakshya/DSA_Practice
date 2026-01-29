@@ -10,7 +10,7 @@ public class ThreadLifeCycle extends Thread {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ThreadLifeCycle t1 = new ThreadLifeCycle();
         System.out.println("Thread state after creation: " + t1.getState()); // NEW state
         t1.start();
@@ -21,6 +21,7 @@ public class ThreadLifeCycle extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        t1.join();
         System.out.println("Thread state after completion: " + t1.getState()); // TERMINATED state
     }
 }
