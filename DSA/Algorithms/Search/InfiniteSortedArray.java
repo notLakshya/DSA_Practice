@@ -1,4 +1,4 @@
-package DSA.Algorithms.Search;
+package DSA.Algorithms.search;
 
 public class InfiniteSortedArray {
     public static void main(String[] args) {

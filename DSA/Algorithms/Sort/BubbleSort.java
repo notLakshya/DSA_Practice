@@ -1,4 +1,4 @@
-package DSA.Algorithms.Sort;
+package DSA.Algorithms.sort;
 
 public class BubbleSort {
     public static void main(String[] args) {

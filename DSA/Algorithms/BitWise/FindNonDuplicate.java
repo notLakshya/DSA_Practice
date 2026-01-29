@@ -1,4 +1,4 @@
-package DSA.Algorithms.BitWise;
+package DSA.Algorithms.bitWise;
 
 public class FindNonDuplicate {
     public static void main(String[] args) {

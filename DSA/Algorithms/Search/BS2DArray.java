@@ -1,4 +1,4 @@
-package DSA.Algorithms.Search;
+package DSA.Algorithms.search;
 
 public class BS2DArray {
     public static void main(String[] args) {

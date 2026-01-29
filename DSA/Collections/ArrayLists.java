@@ -1,3 +1,4 @@
+package DSA.collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,5 +31,9 @@ public class ArrayLists {
         // difference between size and capacity in ArrayList
         // Size is the number of elements currently in the list, 
         // while capacity is the total number of elements the list can hold before needing to resize.
+        arrayList.trimToSize();
+        list.addAll(arrayList);
+        boolean isEmpty = list.isEmpty();
+        System.out.println("Is the list empty? " + isEmpty);
     }
 }

@@ -1,4 +1,4 @@
-package DSA.Algorithms.Search;
+package DSA.Algorithms.search;
 
 import java.util.Scanner;
 

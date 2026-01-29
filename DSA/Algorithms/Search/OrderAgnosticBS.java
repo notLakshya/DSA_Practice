@@ -1,4 +1,4 @@
-package DSA.Algorithms.Search;
+package DSA.Algorithms.search;
 
 public class OrderAgnosticBS {
     public static void main(String[] args) {
