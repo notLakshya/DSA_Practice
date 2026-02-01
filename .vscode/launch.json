@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SortedMapDemo",
+            "request": "launch",
+            "mainClass": "DSA.collections.maps.SortedMapDemo",
+            "projectName": "DSA_Practice_306065d5"
+        },
+        {
+            "type": "java",
+            "name": "WeakHashMapDemo",
+            "request": "launch",
+            "mainClass": "DSA.collections.maps.WeakHashMapDemo",
+            "projectName": "DSA_Practice_306065d5"
+        },
+        {
+            "type": "java",
             "name": "CopyOnWriteArrayListDemo",
             "request": "launch",
             "mainClass": "DSA.collections.CopyOnWriteArrayListDemo",
