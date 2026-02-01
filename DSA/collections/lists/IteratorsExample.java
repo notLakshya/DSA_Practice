@@ -1,4 +1,4 @@
-package DSA.collections;
+package DSA.collections.lists;
 import java.util.ArrayList;
 import java.util.Iterator;
 
